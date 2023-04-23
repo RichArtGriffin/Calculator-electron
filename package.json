@@ -4,12 +4,30 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "electron src/index.js"
+    "start": "electron src/index.js",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": "Richart",
   "license": "ISC",
-  "dependencies": {
-    "electron": "^24.1.2"
+  "devDependencies": {
+    "electron": "^24.1.2",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "com.calculator-richart",
+    "productName": "CalculatorRichart",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "icon": "src/assets/img/icon.ico"
+    },
+    "mac": {
+      "icon": "src/assets/img/icon.icns"
+    },
+    "linux": {
+      "icon": "src/assets/img/icon.png"
+    }
   }
 }
